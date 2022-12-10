@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Bot</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/duDatepicker.min.css">
+    <link rel="stylesheet" href="./css/duDatepicker-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <lottie-player src="./img/SmartLoader.json" background="#fff" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+    </div>
+    <section class="section-main deleted-order">
+      <div class="container">
+        <div class="section-main__wrapper">
+          <div class="section-main__order">
+            <div class="section-main__title">Выбор исполнителя</div>
+            <div class="executor">
+              <div class="executor__item">
+                <input type="radio" name="executor" id="executor_1" value="executor_1">
+                <label for="executor_1">5 000 ₽
+                  <div class="item-checkbox"><span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></div>
+                </label>
+              </div>
+              <div class="executor__item">
+                <input type="radio" name="executor" id="executor_2" value="executor_2">
+                <label for="executor_2">6 000 ₽
+                  <div class="item-checkbox"><span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></div>
+                </label>
+              </div>
+              <div class="executor__item">
+                <input type="radio" name="executor" id="executor_3" value="executor_3">
+                <label for="executor_3">7 000 ₽
+                  <div class="item-checkbox"><span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></div>
+                </label>
+              </div>
+            </div>
+            <div class="executor-done"><a class="btn btn-green" href="#">Далее</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/duDatepicker.min.js"></script>
+    <script src="./js/rolldate.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

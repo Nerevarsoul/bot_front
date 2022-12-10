@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Bot</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/duDatepicker.min.css">
+    <link rel="stylesheet" href="./css/duDatepicker-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <lottie-player src="./img/SmartLoader.json" background="#fff" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+    </div>
+    <section class="section-main">
+      <div class="container">
+        <div class="section-main__wrapper">
+          <div class="section-main__filter">
+            <div class="section-main__filter_head"><a class="btn filter-btn" href="#">Фильтр</a><a class="btn-reset disabled" href="#">Сбросить</a></div>
+          </div>
+          <div class="section-main__order">
+            <div class="section-main__title">Список заказов</div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 1</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 2</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="not-published">Не опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 3</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 4</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 5</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 6</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_item order">
+              <div class="order__head">
+                <div class="order__head_left">
+                  <div class="order__head_number">№ 7</div>
+                  <div class="order__head_date">24.10.2022</div>
+                  <div class="order__head_time">08:00</div>
+                </div>
+                <div class="order__head_status">
+                  <div class="published">Опубликован</div>
+                </div>
+              </div>
+              <div class="order__weight">Грузоподъемность:<span>4.2 т</span></div>
+              <div class="order__address place-of-submission">Набережные Челны, пр-т М.Джавиля, ул.Халитова д.4</div>
+              <div class="order__address place-of-unloading">Казань, ул.Халитова д.</div>
+              <div class="order__info">
+                <div class="order__line">
+                  <div class="order__line_label">Кузов:</div>
+                  <div class="order__line_item">Изотермический фургон</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Гидроборт:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Наличие термописца:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">GPS / Глонасс:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Такелажные рейки, штанги, ремни:</div>
+                  <div class="order__line_item">Есть</div>
+                </div>
+                <div class="order__line">
+                  <div class="order__line_label">Санобработка:</div>
+                  <div class="order__line_item">Нет</div>
+                </div>
+                <div class="order__line line-column">
+                  <div class="order__line_label">Примечание:</div>
+                  <div class="order__line_item">Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк Какое-то примечание в несколько строк, для кого? Для чего? Потом разберемся, но пусть будет ограничение максимум до трех строк</div>
+                </div>
+              </div>
+              <div class="order__buttons"><a class="btn open-btn" href="#">Подробнее</a><a class="btn btn-color choose-btn" href="#">Выбрать</a></div>
+            </div>
+            <div class="section-main__order_pagination pagination"><a class="pagination__prev pagination__button disabled" href="#">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.1266 12.8824L13.7485 19.6459C13.8572 19.7581 13.9866 19.8472 14.1292 19.9079C14.2718 19.9687 14.4247 20 14.5791 20C14.7336 20 14.8865 19.9687 15.0291 19.9079C15.1716 19.8472 15.301 19.7581 15.4098 19.6459C15.6277 19.4216 15.75 19.1182 15.75 18.802C15.75 18.4857 15.6277 18.1823 15.4098 17.958L9.6186 11.9726L15.4098 6.047C15.6277 5.8227 15.75 5.5193 15.75 5.2031C15.75 4.8868 15.6277 4.5834 15.4098 4.3591C15.3014 4.246 15.1722 4.156 15.0296 4.0944C14.8871 4.0327 14.7339 4.0007 14.5791 4C14.4243 4.0007 14.2712 4.0327 14.1286 4.0944C13.986 4.156 13.8568 4.246 13.7485 4.3591L7.1266 11.1227C7.0079 11.2348 6.9131 11.3708 6.8483 11.5222C6.7835 11.6737 6.75 11.8372 6.75 12.0025C6.75 12.1678 6.7835 12.3314 6.8483 12.4828C6.9131 12.6342 7.0079 12.7703 7.1266 12.8824Z" fill="white"></path>
+                </svg></a>
+              <div class="pagination__count"><span>1 из 12</span></div><a class="pagination__next pagination__button" href="#">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.8734 11.1176L11.2515 4.3541C11.1428 4.24189 11.0134 4.15284 10.8708 4.09206C10.7282 4.03129 10.5753 4 10.4209 4C10.2664 4 10.1135 4.03129 9.97093 4.09206C9.82837 4.15284 9.69897 4.24189 9.59021 4.3541C9.37231 4.57838 9.25 4.88179 9.25 5.19804C9.25 5.51429 9.37231 5.8177 9.59021 6.04199L15.3814 12.0274L9.59021 17.953C9.37231 18.1773 9.25 18.4807 9.25 18.7969C9.25 19.1132 9.37231 19.4166 9.59021 19.6409C9.69856 19.754 9.82778 19.844 9.97036 19.9056C10.1129 19.9673 10.2661 19.9993 10.4209 20C10.5757 19.9993 10.7288 19.9673 10.8714 19.9056C11.014 19.844 11.1432 19.754 11.2515 19.6409L17.8734 12.8773C17.9921 12.7652 18.0869 12.6292 18.1517 12.4778C18.2165 12.3263 18.25 12.1628 18.25 11.9975C18.25 11.8322 18.2165 11.6686 18.1517 11.5172C18.0869 11.3658 17.9921 11.2297 17.8734 11.1176Z" fill="white"></path>
+                </svg></a>
+            </div>
+          </div>
+          <div class="chosen-order"><a class="btn-proceed" href="#"></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="filter-section section-main">
+      <div class="container">
+        <form class="section-main__wrapper">
+          <div class="section-main__head"><a class="back-button close-filter" href="#">Закрыть</a>
+            <h2>Фильтр</h2>
+          </div>
+          <div class="filter-section__main">
+            <div class="filter-section__group">
+              <div class="filter-section__label">Сортировка заказов</div>
+              <div class="filter-section__sort">
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="all" value="all" checked>
+                  <label for="all">Все заказы<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="published" value="published">
+                  <label for="published">Опубликованные<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="no_published" value="no_published">
+                  <label for="no_published">Не опубликованные<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Место подачи</div>
+              <div class="filter-section__popup-selection popup-selection location-a">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите место подачи</div>
+                  <input class="selected-input" type="hidden" name="location_a" id="location_a" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Место подачи</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                      <div class="popup-selection__main_small">Арзамас</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                      <div class="popup-selection__main_small">Выкса</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                      <div class="popup-selection__main_small">Дзержинск</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                      <div class="popup-selection__main_small">Иваново</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                      <div class="popup-selection__main_small">Йошкар-Ола</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                      <div class="popup-selection__main_small">Казань</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Место разгрузки</div>
+              <div class="filter-section__popup-selection popup-selection location-b">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите место разгрузки</div>
+                  <input class="selected-input" type="hidden" name="location_b" id="location_b" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Место разгрузки</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                      <div class="popup-selection__main_small">Арзамас</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                      <div class="popup-selection__main_small">Выкса</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                      <div class="popup-selection__main_small">Дзержинск</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                      <div class="popup-selection__main_small">Иваново</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                      <div class="popup-selection__main_small">Йошкар-Ола</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                      <div class="popup-selection__main_small">Казань</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Регион подрядчика</div>
+              <div class="filter-section__popup-selection popup-selection">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите регион</div>
+                  <input class="selected-input" type="hidden" name="region" id="region" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Регион подрядчика</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Тип машины</div>
+              <div class="filter-section__popup-selection popup-selection">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите тип машины</div>
+                  <input class="selected-input" type="hidden" name="type_car" id="type_car" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Тип машины</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group input-date">
+              <div class="filter-section__label">Дата подачи машины</div>
+              <label class="filter-section__input" for="date_car"><span>Выберите день или период</span>
+                <input class="date-car" type="text" name="date_car" id="date_car" placeholder="Выберите день или период">
+              </label>
+            </div>
+            <div class="filter-section__group input-date">
+              <div class="filter-section__label">Дата создания заказа</div>
+              <label class="filter-section__input" for="date_order"><span>Выберите день или период</span>
+                <input class="date-order" type="text" name="date_order" id="date_order" placeholder="Выберите день или период">
+              </label>
+            </div>
+          </div>
+          <div class="filter-section__group filter-section__button"><a class="btn-reset disabled" href="#">Сбросить</a>
+            <button class="btn-green apply-button disabled" type="submit">Применить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/duDatepicker.min.js"></script>
+    <script src="./js/rolldate.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Bot</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/duDatepicker.min.css">
+    <link rel="stylesheet" href="./css/duDatepicker-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <lottie-player src="./img/SmartLoader.json" background="#fff" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+    </div>
+    <section class="section-main">
+      <div class="container">
+        <div class="section-main__wrapper">
+          <div class="section-main__filter">
+            <div class="section-main__filter_head"><a class="btn filter-btn" href="#">Фильтр</a><a class="btn-reset disabled" href="#">Сбросить</a></div>
+          </div>
+          <div class="section-main__order">
+            <div class="section-main__title">Список заказов</div>
+            <div class="empty-list">Возможно, что пока нет ни одного заказа</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="filter-section section-main">
+      <div class="container">
+        <form class="section-main__wrapper">
+          <div class="section-main__head"><a class="back-button close-filter" href="#">Назад</a>
+            <h2>Фильтр</h2>
+          </div>
+          <div class="filter-section__main">
+            <div class="filter-section__group">
+              <div class="filter-section__label">Сортировка заказов</div>
+              <div class="filter-section__sort">
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="all" value="all" checked>
+                  <label for="all">Все заказы<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="published" value="published">
+                  <label for="published">Опубликованные<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+                <div class="filter-section__sort_item">
+                  <input type="radio" name="sort" id="no_published" value="no_published">
+                  <label for="no_published">Не опубликованные<span>
+                      <svg width="12px" height="9px" viewbox="0 0 12 9">
+                        <polyline points="1 5 4 8 11 1"></polyline>
+                      </svg></span></label>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Место подачи</div>
+              <div class="filter-section__popup-selection popup-selection location-a">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите место подачи</div>
+                  <input class="selected-input" type="hidden" name="location_a" id="location_a" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Место подачи</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                      <div class="popup-selection__main_small">Арзамас</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                      <div class="popup-selection__main_small">Выкса</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                      <div class="popup-selection__main_small">Дзержинск</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                      <div class="popup-selection__main_small">Иваново</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                      <div class="popup-selection__main_small">Йошкар-Ола</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                      <div class="popup-selection__main_small">Казань</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Место разгрузки</div>
+              <div class="filter-section__popup-selection popup-selection location-b">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите место разгрузки</div>
+                  <input class="selected-input" type="hidden" name="location_b" id="location_b" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Место разгрузки</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                      <div class="popup-selection__main_small">Арзамас</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                      <div class="popup-selection__main_small">Выкса</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                      <div class="popup-selection__main_small">Дзержинск</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                      <div class="popup-selection__main_small">Иваново</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                      <div class="popup-selection__main_small">Йошкар-Ола</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                      <div class="popup-selection__main_small">Казань</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                      <div class="popup-selection__main_small">City</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Регион подрядчика</div>
+              <div class="filter-section__popup-selection popup-selection">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите регион</div>
+                  <input class="selected-input" type="hidden" name="region" id="region" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Регион подрядчика</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group">
+              <div class="filter-section__label">Тип машины</div>
+              <div class="filter-section__popup-selection popup-selection">
+                <div class="popup-selection__wrapper">
+                  <div class="popup-selection__head">Выберите тип машины</div>
+                  <input class="selected-input" type="hidden" name="type_car" id="type_car" value="">
+                </div>
+                <div class="popup-selection__main">
+                  <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                    <h2>Тип машины</h2>
+                  </div>
+                  <div class="popup-selection__main_wrapper">
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                    <div class="popup-selection__main_item">
+                      <div class="popup-selection__main_strong">Address</div>
+                    </div>
+                  </div>
+                  <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="filter-section__group input-date">
+              <div class="filter-section__label">Дата подачи машины</div>
+              <label class="filter-section__input" for="date_car"><span>Выберите день или период</span>
+                <input type="text" name="date_car" id="date_car" placeholder="Выберите день или период">
+              </label>
+            </div>
+            <div class="filter-section__group input-date">
+              <div class="filter-section__label">Дата создания заказа</div>
+              <label class="filter-section__input" for="date_order"><span>Выберите день или период</span>
+                <input type="date" name="date_order" id="date_order" placeholder="Выберите день или период">
+              </label>
+            </div>
+          </div>
+          <div class="filter-section__group filter-section__button"><a class="btn-reset disabled" href="#">Сбросить</a>
+            <button class="btn-green apply-button disabled" type="submit">Применить</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/duDatepicker.min.js"></script>
+    <script src="./js/rolldate.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

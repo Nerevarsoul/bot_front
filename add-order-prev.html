@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Bot</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/duDatepicker.min.css">
+    <link rel="stylesheet" href="./css/duDatepicker-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="preloader">
+      <lottie-player src="./img/SmartLoader.json" background="#fff" speed="1" style="width: 50px; height: 50px;" loop autoplay></lottie-player>
+    </div>
+    <section class="section-add-order section-main">
+      <div class="container">
+        <div class="section-add-order__first">
+          <h2>Выберите вариант <br>создания заказа</h2>
+          <div class="section-add-order__column"><a class="btn btn-color new-order-empty" href="#">Новый заказ</a><a class="btn btn-color new-order-empty new-order-prev" href="#">На основе предыдущего</a></div>
+        </div>
+        <form class="section-add-order__new">
+          <div class="section-main__head"><a class="back-button close-order-new" href="#">Назад</a>
+            <h2>Новый заказ</h2>
+          </div>
+          <div class="section-add-order__wrapper">
+            <div class="section-add-order__alert">Поля отмеченные зёздочкой обязательные для заполнения!</div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">1</div>
+                <div class="section-add-order__block_title">Дата и время</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="filter-section__group input-date small-group">
+                  <div class="filter-section__label required">Дата подачи</div>
+                  <label class="filter-section__input" for="order_date"><span>ДД/ММ/ГГГГ</span>
+                    <input type="text" name="order_date" id="order_date" placeholder="ДД/ММ/ГГГГ" value="02/12/2022" required>
+                  </label>
+                </div>
+                <div class="filter-section__group input-date small-group">
+                  <div class="filter-section__label required">Время подачи</div>
+                  <label class="filter-section__input selected-date" for="order_time"><span class="selected-date">ЧЧ:ММ</span>
+                    <input type="text" placeholder="ЧЧ:ММ" name="order_time" id="order_time" value="12:30" required>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">2</div>
+                <div class="section-add-order__block_title">Адрес</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="filter-section__group">
+                  <div class="filter-section__label required">Место подачи</div>
+                  <div class="filter-section__popup-selection popup-selection location-a">
+                    <div class="popup-selection__wrapper">
+                      <div class="popup-selection__head">Выберите место подачи</div>
+                      <input class="selected-input" type="hidden" name="location_a" id="location_a" value="ул. Казанская, д.2" required>
+                    </div>
+                    <div class="popup-selection__main">
+                      <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                        <h2>Место подачи</h2>
+                      </div>
+                      <div class="popup-selection__main_wrapper">
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                          <div class="popup-selection__main_small">Арзамас</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                          <div class="popup-selection__main_small">Выкса</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                          <div class="popup-selection__main_small">Дзержинск</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                          <div class="popup-selection__main_small">Иваново</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                          <div class="popup-selection__main_small">Йошкар-Ола</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                          <div class="popup-selection__main_small">Казань</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                      </div>
+                      <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-section__group">
+                  <div class="filter-section__label required">Место разгрузки</div>
+                  <div class="filter-section__popup-selection popup-selection location-b">
+                    <div class="popup-selection__wrapper">
+                      <div class="popup-selection__head">Выберите место разгрузки</div>
+                      <input class="selected-input" type="hidden" name="location_b" id="location_b" value="ул. Минина, д.5" required>
+                    </div>
+                    <div class="popup-selection__main">
+                      <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                        <h2>Место разгрузки</h2>
+                      </div>
+                      <div class="popup-selection__main_wrapper">
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Казанская, д.2</div>
+                          <div class="popup-selection__main_small">Арзамас</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Минина, д.5</div>
+                          <div class="popup-selection__main_small">Выкса</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">пр-кт Свердлова, д.65а</div>
+                          <div class="popup-selection__main_small">Дзержинск</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Мира, д.2</div>
+                          <div class="popup-selection__main_small">Иваново</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Медведевский район, п. Медведово, ул. Железнодорожная, д. 11</div>
+                          <div class="popup-selection__main_small">Йошкар-Ола</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">ул. Халитова, д.4</div>
+                          <div class="popup-selection__main_small">Казань</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                          <div class="popup-selection__main_small">City</div>
+                        </div>
+                      </div>
+                      <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-section__group">
+                  <div class="filter-section__label required">Регион подрядчика</div>
+                  <div class="filter-section__popup-selection popup-selection">
+                    <div class="popup-selection__wrapper">
+                      <div class="popup-selection__head disabled">Выберите регион</div>
+                      <input class="selected-input" type="hidden" name="region" id="region" value="" required>
+                    </div>
+                    <div class="popup-selection__main">
+                      <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                        <h2>Регион подрядчика</h2>
+                      </div>
+                      <div class="popup-selection__main_wrapper">
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Address</div>
+                        </div>
+                      </div>
+                      <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="several" id="several" value="several" checked>
+                    <label for="several">Доставка в несколько рейсов
+                      <p>Выберите, если возможна только такая доставка. Возможно текст будет еще больше, плюс минус в три строки...</p>
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">3</div>
+                <div class="section-add-order__block_title">Стоимость заказа</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="section-add-order__price">
+                  <label for="order_price">Стоимость заказа</label>
+                  <input class="only_num" type="number" name="order_price" id="order_price" placeholder="Напишите стоимость в рублях" value="25000">
+                </div>
+              </div>
+            </div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">4</div>
+                <div class="section-add-order__block_title">Тип автомобиля</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="filter-section__group">
+                  <div class="filter-section__label required">Грузоподъемность</div>
+                  <div class="filter-section__popup-selection popup-selection">
+                    <div class="popup-selection__wrapper">
+                      <div class="popup-selection__head">Выберите вариант</div>
+                      <input class="selected-input" type="hidden" name="weight" id="weight" value="5 т" required>
+                    </div>
+                    <div class="popup-selection__main">
+                      <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                        <h2>Грузоподъемность</h2>
+                      </div>
+                      <div class="popup-selection__main_wrapper">
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">1,5 т</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">5 т</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">7 т</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">10 т</div>
+                        </div>
+                      </div>
+                      <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-section__group">
+                  <div class="filter-section__label required">Тип кузова</div>
+                  <div class="filter-section__popup-selection popup-selection">
+                    <div class="popup-selection__wrapper">
+                      <div class="popup-selection__head">Выберите вариант</div>
+                      <input class="selected-input" type="hidden" name="type_box" id="type_box" value="Изотермический фургон" required>
+                    </div>
+                    <div class="popup-selection__main">
+                      <div class="section-main__head"><a class="back-button close-selection" href="#">Назад</a>
+                        <h2>Тип кузова</h2>
+                      </div>
+                      <div class="popup-selection__main_wrapper">
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Рефрижератор</div>
+                        </div>
+                        <div class="popup-selection__main_item">
+                          <div class="popup-selection__main_strong">Изотермический фургон</div>
+                        </div>
+                      </div>
+                      <div class="popup-selection__main_chosen"><a class="btn-green" chosen-value="" href="#">Выбрать</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">5</div>
+                <div class="section-add-order__block_title">Дополнительно</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="gidro" id="gidro" value="gidro" checked>
+                    <label for="gidro">Гидроборт
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="thermo" id="thermo" value="thermo">
+                    <label for="thermo">Наличие термописца
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="gps" id="gps" value="gps">
+                    <label for="gps">GPS / Глонасс
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="take" id="take" value="take">
+                    <label for="take">Такелажные рейки, штанги, ремни
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+                <div class="section-add-order__checkbox">
+                  <div class="filter-section__sort_item">
+                    <input type="checkbox" name="san" id="san" value="san">
+                    <label for="san">Санобработка
+                      <div class="item-checkbox"><span>
+                          <svg width="12px" height="9px" viewbox="0 0 12 9">
+                            <polyline points="1 5 4 8 11 1"></polyline>
+                          </svg></span></div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="section-add-order__block">
+              <div class="section-add-order__block_head">
+                <div class="section-add-order__block_number">6</div>
+                <div class="section-add-order__block_title">Комментарий</div>
+              </div>
+              <div class="section-add-order__block_main">
+                <div class="section-add-order__textarea">
+                  <label for="note">Примечание</label>
+                  <textarea class="textarea" name="note" id="note" placeholder="Напишите примечание">Такелажные рейки, штанги, ремниТакелажные рейки, штанги, ремниТакелажные рейки, штанги, ремниТакелажные рейки, штанги, ремниТакелажные рейки, штанги, ремни</textarea>
+                </div>
+              </div>
+              <div class="form-group__button">
+                <button class="btn btn-green disabled new-order-append" type="submit">Создать заказ</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./js/duDatepicker.min.js"></script>
+    <script src="./js/rolldate.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
